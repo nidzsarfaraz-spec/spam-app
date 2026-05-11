@@ -47,7 +47,7 @@ input_text = st.text_area("Enter the Message")
 if st.button('predict'):
 
     #1.Preprocess
-    transform_text = transform_text(input_text)
+    transformed_text = transform_text(input_text)
 
     vectorized_input = Tfidf.transform([transform_text])
 
