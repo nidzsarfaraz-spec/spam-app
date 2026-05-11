@@ -4,6 +4,7 @@ import string
 from  nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
+nltk.download('punkt_tab')
 
 ps=PorterStemmer()
 
@@ -31,7 +32,7 @@ def transform_text(text):
     for i in text:
         y.append(ps.stem(i))
 
-    return" ".join(y)
+    return " ".join(y)
 
 
 Tfidf = pickle.load(open('vectorizer.pkl','rb'))
