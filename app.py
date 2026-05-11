@@ -49,7 +49,7 @@ if st.button('predict'):
     #1.Preprocess
     transformed_text = transform_text(input_text)
 
-    vectorized_input = Tfidf.transform([transform_text])
+    vectorized_input = Tfidf.transform([transformed_text])
 
     result = model.predict(vectorized_input)[0]
 
